@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
+
+<xs:element name="carColors" type="tns:carColors"/>
+
+<xs:element name="carColorsResponse" type="tns:carColorsResponse"/>
+
+<xs:element name="delete" type="tns:delete"/>
+
+<xs:element name="deleteResponse" type="tns:deleteResponse"/>
+
+<xs:element name="getBasedOnMakeAndColor" type="tns:getBasedOnMakeAndColor"/>
+
+<xs:element name="getBasedOnMakeAndColorResponse" type="tns:getBasedOnMakeAndColorResponse"/>
+
+<xs:element name="getBlueAndAvailable" type="tns:getBlueAndAvailable"/>
+
+<xs:element name="getBlueAndAvailableResponse" type="tns:getBlueAndAvailableResponse"/>
+
+<xs:element name="insert" type="tns:insert"/>
+
+<xs:element name="insertResponse" type="tns:insertResponse"/>
+
+<xs:element name="update" type="tns:update"/>
+
+<xs:element name="updateResponse" type="tns:updateResponse"/>
+
+<xs:complexType name="delete">
+<xs:sequence>
+<xs:element name="registrationNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBasedOnMakeAndColor">
+<xs:sequence>
+<xs:element name="carMake" type="xs:string" minOccurs="0"/>
+<xs:element name="color" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBasedOnMakeAndColorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="update">
+<xs:sequence>
+<xs:element name="registrationNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="color" type="xs:string" minOccurs="0"/>
+<xs:element name="availability" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insert">
+<xs:sequence>
+<xs:element name="carMake" type="xs:string" minOccurs="0"/>
+<xs:element name="color" type="xs:string" minOccurs="0"/>
+<xs:element name="registrationNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="yearOfManufacturing" type="xs:int"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+<xs:element name="availability" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="carColors">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="carColorsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBlueAndAvailable">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getBlueAndAvailableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
